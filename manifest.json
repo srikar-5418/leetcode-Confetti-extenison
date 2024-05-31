@@ -1,0 +1,30 @@
+{
+    "manifest_version": 3,
+    "name": "LeetCode Confetti",
+    "version": "1.0",
+    "author":"SrikarGujja",
+    "permissions": ["tabs",
+    "webRequest"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://leetcode.com/*"],
+        "js": ["content.js"],
+        "css":["content.css"]
+      }
+    ],
+    "icons":{
+      "16":"confetti_1488336 (1).png",
+      "32":"confetti_1488336 (2).png",
+      "48":"confetti_1488336 (3).png",
+      "128":"confetti_1488336 (4).png"
+    },
+    "host_permissions": [
+      "*://leetcode.com/*"
+    ]
+   
+  }
+  
